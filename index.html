@@ -51,7 +51,11 @@
             }
 
             // Fetch and display a random quote when the page loads
-            document.addEventListener('DOMContentLoaded', getRandomQuote());
+            document.addEventListener('DOMContentLoaded', function () { 
+                getRandomQuote();
+                
+                setInterval(getRandomQuote, 5000);
+            });
         </script>
 
     </head>
